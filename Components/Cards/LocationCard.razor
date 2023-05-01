@@ -1,5 +1,5 @@
-﻿@using ficym.Services.location;
-@inject LocationService LocationService;
+﻿@using ficym.Entities;
+@using ficym.IServices.location;
 <div class="card">
     <div class="card-header">
         <strong>Location</strong>
@@ -25,9 +25,12 @@
     [Parameter]
     public EventCallback<GeoCordinates> OnGeoLocationRetrived { get; set; }
 
+    [Inject]
+    private ILocationService LocationService { get; set; }
     private double Latitude { get; set; }
     private double Longitude { get; set; }
     private double? Altitude { get; set; }
+
     private bool IsLoading { get; set; }
 
     protected override async Task OnInitializedAsync()

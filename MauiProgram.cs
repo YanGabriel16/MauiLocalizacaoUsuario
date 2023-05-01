@@ -1,6 +1,8 @@
 ﻿using Microsoft.Extensions.Logging;
 using ficym.Data;
-using ficym.Services.location;
+using ficym.IServices.location;
+using ficym.Services;
+using ficym.Entities;
 
 namespace ficym;
 
@@ -24,8 +26,9 @@ public static class MauiProgram
 #endif
 
 		builder.Services.AddSingleton<WeatherForecastService>();
-        builder.Services.AddScoped<LocationService>();
-        builder.Services.AddBlazorWebViewDeveloperTools();
+        builder.Services.AddScoped<ILocationService, LocationService>();
+		builder.Services.AddSingleton<GeoCordinates>();
+		builder.Services.AddBlazorWebViewDeveloperTools();
 
         return builder.Build();
 	}

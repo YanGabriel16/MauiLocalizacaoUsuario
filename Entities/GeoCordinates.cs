@@ -1,10 +1,11 @@
-﻿using System;
+﻿using ficym.IServices.location;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ficym.Services.location
+namespace ficym.Entities
 {
     public class GeoCordinates
     {

@@ -1,13 +1,7 @@
-﻿using ficym.Services.location;
-using Microsoft.Maui.ApplicationModel;
-using Microsoft.Maui.Devices.Sensors;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ficym.Entities;
+using ficym.IServices.location;
 
-namespace ficym
+namespace ficym.Services
 {
     public class LocationService : ILocationService
     {
@@ -47,9 +41,9 @@ namespace ficym
             }
             return new GeoCordinates()
             {
-                Latitude = 9999999.00,
-                Longitude = 9999999.00,
-                Altitude = 9999999.00,
+                Latitude = 404,
+                Longitude = 404,
+                Altitude = 404,
             };
         }
     }
