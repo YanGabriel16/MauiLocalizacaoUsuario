@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\yan80\source\repos\ficym\bin\Release\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-05-01T14:52:58.441</Modified>
+      <Modified>2023-05-01T15:02:01.555</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\yan80\source\repos\ficym\bin\Release\net7.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-05-01T14:50:56.540</Modified>
+      <Modified>2023-05-01T15:01:59.876</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\yan80\source\repos\ficym\bin\Release\net7.0-windows10.0.19041.0\win10-x64\ficym.runtimeconfig.json">
       <PackagePath>ficym.runtimeconfig.json</PackagePath>
@@ -44,7 +44,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\yan80\source\repos\ficym\obj\Release\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>ficym.exe</PackagePath>
-      <Modified>2023-05-01T14:52:55.175</Modified>
+      <Modified>2023-05-01T15:01:58.197</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\yan80\.nuget\packages\microsoft.netcore.app.runtime.win-x64\7.0.4\runtimes\win-x64\native\Microsoft.DiaSymReader.Native.amd64.dll">
       <PackagePath>Microsoft.DiaSymReader.Native.amd64.dll</PackagePath>
@@ -956,7 +956,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\yan80\source\repos\ficym\obj\Release\net7.0-windows10.0.19041.0\win10-x64\R2R\ficym.dll">
       <PackagePath>ficym.dll</PackagePath>
-      <Modified>2023-05-01T14:52:57.755</Modified>
+      <Modified>2023-05-01T15:02:00.959</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\yan80\source\repos\ficym\obj\Release\net7.0-windows10.0.19041.0\win10-x64\R2R\Microsoft.Maui.dll">
       <PackagePath>Microsoft.Maui.dll</PackagePath>
@@ -988,7 +988,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\yan80\source\repos\ficym\obj\Release\net7.0-windows10.0.19041.0\win10-x64\ficym.deps.json">
       <PackagePath>ficym.deps.json</PackagePath>
-      <Modified>2023-05-01T14:52:58.034</Modified>
+      <Modified>2023-05-01T15:02:01.247</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\dotnet\packs\Microsoft.Maui.Controls.Ref.win\7.0.59\ref\net7.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>

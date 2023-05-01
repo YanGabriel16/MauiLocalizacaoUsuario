@@ -3,23 +3,23 @@ using ficym.IServices.location;
 
 namespace ficym.Services
 {
-    public class LocationService : ILocationService
+    public class LocalizacaoService : ILocalizacaoService
     {
-        public async Task<GeoCordinates> GetCurrenteLocation(CancellationToken cancellationToken)
+        public async Task<Coordenadas> GetLocalizacaoAtual(CancellationToken cancellationToken)
         {
             Console.WriteLine("Location service passou...");
             try
             {
                 var request = new GeolocationRequest(GeolocationAccuracy.Best, TimeSpan.FromSeconds(1));
-                var location = await Geolocation.GetLocationAsync(request, cancellationToken);
+                var loc = await Geolocation.GetLocationAsync(request, cancellationToken);
 
-                if (location != null)
+                if (loc != null)
                 {
-                    return new GeoCordinates()
+                    return new Coordenadas()
                     {
-                        Latitude = location.Latitude,
-                        Longitude = location.Longitude,
-                        Altitude = location.Altitude,
+                        Latitude = loc.Latitude,
+                        Longitude = loc.Longitude,
+                        Altitude = loc.Altitude,
                     };
                 }
             }
@@ -39,7 +39,7 @@ namespace ficym.Services
             {
                 Console.WriteLine(ex);
             }
-            return new GeoCordinates()
+            return new Coordenadas()
             {
                 Latitude = 404,
                 Longitude = 404,

@@ -23,10 +23,10 @@
 @code
 {
     [Parameter]
-    public EventCallback<GeoCordinates> OnGeoLocationRetrived { get; set; }
+    public EventCallback<Coordenadas> OnGeoLocationRetrived { get; set; }
 
     [Inject]
-    private ILocationService LocationService { get; set; }
+    private ILocalizacaoService LocalizacaoService { get; set; }
     private double Latitude { get; set; }
     private double Longitude { get; set; }
     private double? Altitude { get; set; }
@@ -37,11 +37,11 @@
     {
         Console.WriteLine("LocationCard passou...");
         IsLoading = true;
-        var location = await LocationService.GetCurrenteLocation(new System.Threading.CancellationTokenSource().Token);
-        this.Latitude = location.Latitude;
-        this.Longitude = location.Longitude;
-        this.Altitude = location.Altitude;
-        await OnGeoLocationRetrived.InvokeAsync(location);
+        var loc = await LocalizacaoService.GetLocalizacaoAtual(new System.Threading.CancellationTokenSource().Token);
+        this.Latitude = loc.Latitude;
+        this.Longitude = loc.Longitude;
+        this.Altitude = loc.Altitude;
+        await OnGeoLocationRetrived.InvokeAsync(loc);
         IsLoading = false;
     }
 }

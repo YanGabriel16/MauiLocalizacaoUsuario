@@ -26,8 +26,8 @@ public static class MauiProgram
 #endif
 
 		builder.Services.AddSingleton<WeatherForecastService>();
-        builder.Services.AddScoped<ILocationService, LocationService>();
-		builder.Services.AddSingleton<GeoCordinates>();
+        builder.Services.AddScoped<ILocalizacaoService, LocalizacaoService>();
+		builder.Services.AddSingleton<Coordenadas>();
 		builder.Services.AddBlazorWebViewDeveloperTools();
 
         return builder.Build();
