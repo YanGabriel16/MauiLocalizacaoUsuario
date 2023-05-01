@@ -1,0 +1,1 @@
+C:\Users\yan80\source\repos\ficym\ficym.csproj;x64

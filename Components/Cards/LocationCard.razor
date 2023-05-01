@@ -1,0 +1,44 @@
+﻿@using ficym.Services.location;
+@inject LocationService LocationService;
+<div class="card">
+    <div class="card-header">
+        <strong>Location</strong>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col">Latitude:</div>
+            <div class="col">@Latitude</div>
+        </div>
+        <div class="row">
+            <div class="col">Longitude:</div>
+            <div class="col">@Longitude</div>
+        </div>
+        <div class="row">
+            <div class="col">Altitude:</div>
+            <div class="col">@Altitude</div>
+        </div>
+    </div>
+</div>
+
+@code
+{
+    [Parameter]
+    public EventCallback<GeoCordinates> OnGeoLocationRetrived { get; set; }
+
+    private double Latitude { get; set; }
+    private double Longitude { get; set; }
+    private double? Altitude { get; set; }
+    private bool IsLoading { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        Console.WriteLine("LocationCard passou...");
+        IsLoading = true;
+        var location = await LocationService.GetCurrenteLocation(new System.Threading.CancellationTokenSource().Token);
+        this.Latitude = location.Latitude;
+        this.Longitude = location.Longitude;
+        this.Altitude = location.Altitude;
+        await OnGeoLocationRetrived.InvokeAsync(location);
+        IsLoading = false;
+    }
+}

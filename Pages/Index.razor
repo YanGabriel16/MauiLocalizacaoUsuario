@@ -1,0 +1,23 @@
+﻿@page "/"
+@using ficym.Components.Cards
+@using ficym.Services.location;
+
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+        <div class="col">
+            <LocationCard OnGeoLocationRetrived="OnGeoLocationRetrived"></LocationCard>
+        </div>
+    </div>
+</div>
+
+<SurveyPrompt Title="How is Blazor working for you?" />
+
+@code
+{
+    private GeoCordinates location { get; set; }
+
+    private void OnGeoLocationRetrived(GeoCordinates cordinates)
+    {
+        this.location = cordinates;
+    }
+}
